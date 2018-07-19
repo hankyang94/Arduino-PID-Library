@@ -31,6 +31,10 @@ class PID
                                           //   calculation frequency can be set using SetMode
                                           //   SetSampleTime respectively
 
+	bool ComputeWithoutTiming();          // Use this compute function when there is outside timing loop so that
+								          // it is unnecessary to check for timing inside compute
+
+
     void SetOutputLimits(double, double); // * clamps the output to a specific range. 0-255 by default, but
 										                      //   it's likely the user will want to change this depending on
 										                      //   the application
